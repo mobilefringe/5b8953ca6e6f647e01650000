@@ -140,7 +140,7 @@
                             this.pageBanner = temp_repo[0];
                         } else {
                             this.pageBanner = {
-                                "image_url": "//codecloud.cdn.speedyrails.net/sites/5b71eb886e6f6450013c0000/image/jpeg/1529532304000/insidebanner2.jpg"
+                                "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
                             }
                         }
                     }
