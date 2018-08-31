@@ -81,14 +81,14 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                 social_media: [
                     {
                         name: "Facebook",
-                        url: "https://www.facebook.com/GerrardSquare",
+                        url: "https://www.facebook.com/Simcoe-Town-Centre-1437325053163821/",
                         iconClass: "fab fa-facebook-f"
                     },
-                    {
-                        name: "Twitter",
-                        url: "https://twitter.com/GerrardSquare",
-                        iconClass: "fab fa-twitter"
-                    }
+                    // {
+                    //     name: "Twitter",
+                    //     url: "https://twitter.com/GerrardSquare",
+                    //     iconClass: "fab fa-twitter"
+                    // }
                 ],
                 inside_banner : null
             }
