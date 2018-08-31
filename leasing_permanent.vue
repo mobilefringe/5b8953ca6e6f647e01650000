@@ -148,7 +148,7 @@
                             send_data = {};
                             send_data.url = "https://www.mallmaverick.com/send_contact_email";
                             var perm_formdata = {}; //JSON.stringify(this.serializeObject(this.form_data));
-                            perm_formdata.send_to = "eastwoodr@davpart.com";
+                            perm_formdata.send_to = "caitlin@mobilefringe.com";
                             perm_formdata.subject = "Centennial Mall Permanent Leasing Form"; 
                             perm_formdata.body = {};
                             perm_formdata.body["Legal Name of Organization"] =  this.form_data.legalName;
