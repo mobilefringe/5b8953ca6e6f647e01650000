@@ -105,16 +105,7 @@
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
                         }
                     }
-                    
-                    // var temp_repo = this.findRepoByName('Contact Us Banner')
-                    // if(temp_repo != null) {
-                    //     var images = temp_repo.images
-                    //     this.pageBanner = images[0];
-                    // } else {
-                    //     this.pageBanner = {
-                    //         "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
-                    //     }
-                    // }
+
                     this.currentPage = response[0].data;
                     this.dataLoaded = true;
                 });
