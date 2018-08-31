@@ -151,8 +151,10 @@
             },
             watch: {
                 currentStore: function() {
-                    // if (_.includes(current_promo.image_url, 'missing')) {
-                        
+                    if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
+                        this.currentStore.store_front_url_abs = this.property.default_logo_url;
+                    }
+                    
                     this.currentStore.zoom = 2;
                     if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
                         this.currentStore.store_front_url_abs = this.property.default_logo_url;
