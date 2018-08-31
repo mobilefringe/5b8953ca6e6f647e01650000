@@ -276,7 +276,7 @@ hr{
     min-width: 108px;
 	font-family: Avenir-Book;
 	text-transform: uppercase;
-	&:hover {
+	&:hover, &:focus, &:active {
 	    color: $primary;
 	    text-decoration: underline;
 	}
