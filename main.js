@@ -86,7 +86,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                     },
                     // {
                     //     name: "Twitter",
-                    //     url: "https://twitter.com/GerrardSquare",
+                    //     url: "",
                     //     iconClass: "fab fa-twitter"
                     // }
                 ],
