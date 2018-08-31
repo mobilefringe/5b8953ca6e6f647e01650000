@@ -56,7 +56,7 @@
                         var _this = this;
                         this.property.mm_host = this.property.mm_host.replace("http:", "");
                         this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + _this.id + ".json" }).then(function (response) {
-                            var temp_repo = this.findRepoByName('Directory Banner');
+                            var temp_repo = this.findRepoByName('Inside Page Banner');
                             if(temp_repo !== null && temp_repo !== undefined) {
                                var images = temp_repo.images;
                                if (images !== null && images !== undefined) {
