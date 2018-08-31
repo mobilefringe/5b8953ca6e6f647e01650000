@@ -37,7 +37,7 @@
                 }
             },
             created() {
-                var temp_repo = this.findRepoByName('Inside Page Banner').images;
+                var temp_repo = this.findRepoByName('Inside Page Banner');
                 if(temp_repo !== null && temp_repo !== undefined) {
                    var images = temp_repo.images;
                    if (images !== null && images !== undefined) {
