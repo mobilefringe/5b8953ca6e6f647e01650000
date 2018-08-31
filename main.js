@@ -79,11 +79,11 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
             return {
                 menu_items: MenuItems,
                 social_media: [
-                    {
-                        name: "Facebook",
-                        url: "https://www.facebook.com/Simcoe-Town-Centre-1437325053163821/",
-                        iconClass: "fab fa-facebook-f"
-                    },
+                    // {
+                    //     name: "Facebook",
+                    //     url: "",
+                    //     iconClass: "fab fa-facebook-f"
+                    // },
                     // {
                     //     name: "Twitter",
                     //     url: "",
