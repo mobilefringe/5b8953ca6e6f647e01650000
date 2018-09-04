@@ -85,8 +85,8 @@
                 this.loadData().then(response => {
                     var temp_repo = this.findRepoByName('Events Banner');
                     if(temp_repo !== null && temp_repo !== undefined) {
-                       var images = temp_repo.images;
-                       if (images !== null && images !== undefined) {
+                        var images = temp_repo.images;
+                        if (images !== null && images !== undefined) {
                             this.pageBanner = images[0];
                         } else {
                             this.pageBanner = {
