@@ -83,9 +83,16 @@
             },
             created (){
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Events Banner').images;
-                    if(temp_repo != null) {
-                        this.pageBanner = temp_repo[0];
+                    var temp_repo = this.findRepoByName('Events Banner');
+                    if(temp_repo !== null && temp_repo !== undefined) {
+                       var images = temp_repo.images;
+                       if (images !== null && images !== undefined) {
+                            this.pageBanner = images[0];
+                        } else {
+                            this.pageBanner = {
+                                "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
+                            }
+                        }
                     } else {
                         this.pageBanner = {
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
