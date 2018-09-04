@@ -108,9 +108,16 @@
             },
             created() {
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Map Banner').images;
-                    if(temp_repo != null) {
-                        this.pageBanner = temp_repo[0];
+                    var temp_repo = this.findRepoByName('Leasing Banner');
+                    if(temp_repo !== null && temp_repo !== undefined) {
+                       var images = temp_repo.images;
+                       if (images !== null && images !== undefined) {
+                            this.pageBanner = images[0];
+                        } else {
+                            this.pageBanner = {
+                                "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
+                            }
+                        }
                     } else {
                         this.pageBanner = {
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
@@ -152,7 +159,6 @@
                             perm_formdata.subject = "Centennial Mall Permanent Leasing Form"; 
                             perm_formdata.body = {};
                             perm_formdata.body["Legal Name of Organization"] =  this.form_data.legalName;
-                             
                             perm_formdata.body["Contact First Name"] =   this.form_data.firstName, 
                             perm_formdata.body["Contact Last Name"] = this.form_data.lastName,
                             perm_formdata.body["Contact Phone Number"] = this.form_data.phone, 
@@ -161,7 +167,6 @@
                             perm_formdata.body["Comments"] =  this.form_data.comments,
                             
                             send_data.form_data = Utility.serializeObject(perm_formdata);
-                            console.log("Data ", send_data.form_data)
                             var vm = this;
                             $.ajax({
                                 url : send_data.url,
