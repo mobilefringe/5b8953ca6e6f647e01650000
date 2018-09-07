@@ -968,6 +968,8 @@ footer {
         height: 220px;
         position: relative;
         .store_details_name {
+            margin: 0;
+            padding: 10px;
             position: absolute;
             top: 50%;
             left: 50%;
