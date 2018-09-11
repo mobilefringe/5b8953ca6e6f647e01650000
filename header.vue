@@ -118,6 +118,7 @@
                     noScroll: false,
                     windowWidth: 0,
                     siteInfo: site,
+                    headerReady: false
                 }
             },
             props:['menu_items', 'social_media'],
@@ -142,6 +143,9 @@
                 this.$nextTick(function() {
                     window.addEventListener('resize', this.getWindowWidth);
                     this.getWindowWidth();
+                });
+                this.loadData().then(response => {
+                    this.headerReady = true;
                 });
             },
             mounted() {
