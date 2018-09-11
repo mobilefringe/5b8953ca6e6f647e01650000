@@ -30,7 +30,8 @@
                                         </div>    
                                     </div> 
                                     <div v-else>
-                                        <img class="result_logo" :src="result.store.store_front_url_abs"/>    
+                                        <img v-if="result.store" class="result_logo" :src="result.store.store_front_url_abs"/>
+                                        <img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>
                                     </div>
                                 </div>
                                 <div v-else class="col-md-3 store_details_image center-block">
