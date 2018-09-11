@@ -200,17 +200,8 @@
                     });
                     
                     var list = _.union( stores, events, promos, jobs );
-                    console.log(list)
                     return list
                 },
-                // locale: {
-                //     get () {
-                //         return this.$store.state.locale
-                //     },
-                //     set (value) {
-                //         this.$store.commit('SET_LOCALE', { lang: value })
-                //     }
-                // },
                 todays_hours() {
                     return this.getTodayHours;
                 },
