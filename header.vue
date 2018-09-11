@@ -214,12 +214,12 @@
                 getWindowWidth(event) {
                     this.windowWidth = window.innerWidth;
                 },
-                onOptionSelect(option) {
-                    this.$nextTick(function() {
-                        this.search = ""
-                    });
-                    this.$router.push("/stores/" + option.slug);
-                }
+                // onOptionSelect(option) {
+                //     this.$nextTick(function() {
+                //         this.search = ""
+                //     });
+                //     this.$router.push("/stores/" + option.slug);
+                // }
             },
             beforeDestroy: function() {
                 window.removeEventListener('resize', this.getWindowWidth);
