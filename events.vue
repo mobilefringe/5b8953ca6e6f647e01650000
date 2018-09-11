@@ -117,11 +117,11 @@
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
                             if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531496511000/event placeholder.png";
+                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/jpeg/1536679734000/PH2.jpg";
                             }
                             
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531496511000/event placeholder.png";
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/jpeg/1536679734000/PH2.jpg";
                             }
                             
                             value.description_short = _.truncate(value.description, { 'length': 100, 'separator': ' ' });
