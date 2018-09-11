@@ -99,6 +99,7 @@
                 },
                 getSVGMap () {
                     var mapURL = "https://www.mallmaverick.com" + this.property.svgmap_url.split("?")[0];
+                    console.log("mapURL", mapURL)
                     return mapURL
                 },
                 floorList () {
