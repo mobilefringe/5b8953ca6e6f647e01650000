@@ -83,7 +83,7 @@
 				this.$store.dispatch("getData", "events").then(response => {
 					this.currentEvent = this.findEventBySlug(this.id);
 					if (this.currentEvent === null || this.currentEvent === undefined) {
-						this.$router.replace({ name: '404' });
+						this.$router.replace({ path: '/' });
 					}
 					this.dataLoaded = true;
 				}, error => {
@@ -99,7 +99,7 @@
                             }
                         } else {
                             if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-                                this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531496511000/event placeholder.png";    
+                                this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/jpeg/1536679734000/PH2.jpg";    
                             }
                         }
                     }
