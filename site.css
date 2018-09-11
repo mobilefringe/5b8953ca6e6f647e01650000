@@ -206,9 +206,9 @@ hr{
             border-radius: 11px !important;
             width: 100%;
         }
-        #siteSearchBtn {
-            cursor: pointer;
-        }
+        // #siteSearchBtn {
+        //     cursor: pointer;
+        // }
     }
     // #searchBox {
     //     height: 25px !important;
@@ -248,7 +248,7 @@ hr{
         border: none;
     }
     .no_logo {
-        height: auto;
+        // height: auto;
         border: 1px solid #D8D8D8; 
         .store_details_name{
             font-size:1rem;
