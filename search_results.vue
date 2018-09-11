@@ -28,9 +28,11 @@
                                         </p>
                                     </div>    
                                 </div>
+                                <div class="col-md-3" v-else-if="!result.store">
+                                    <img class="result_logo" :src="//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1535746524000/centennial_default-compressor.png"/>
+                                </div>
                                 <div class="col-md-3" v-else>
                                     <img v-if="result.store" class="result_logo" :src="result.store.store_front_url_abs"/>
-                                    <img v-else-if="!result.store" class="result_logo" :src="//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1535746524000/centennial_default-compressor.png"/>
                                 </div>
                                 <div class="col-md-9 search_result_content">
                                     <h3>{{result.name}}</h3>
