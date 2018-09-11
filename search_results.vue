@@ -28,11 +28,11 @@
                                         </p>
                                     </div>    
                                 </div>
-                                <div class="col-md-2" v-else>
+                                <div class="col-md-3" v-else>
                                     <img v-if="result.store" class="result_logo" :src="result.store.store_front_url_abs"/>
                                     <img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>
                                 </div>
-                                <div class="col-md-10 search_result_content">
+                                <div class="col-md-9 search_result_content">
                                     <h3>{{result.name}}</h3>
                                     <p>{{truncated(result.description)}}</p>
                                     <router-link v-if="result.store_front_url_abs" class="result_link hvr-icon-forward" :to="{name: 'storeDetails', params:{id:result.slug}}">Learn more about {{result.name}} <i class="fa fa-chevron-right hvr-icon"></i></router-link>
