@@ -194,13 +194,12 @@
                             value.is_store = true;    
                         }
                     });
-                    var list = _.union(
-                        this.processedStores,
-                        events,
-                        promos,
-                        jobs
+                    var stores = this.processedStores;
+                    _.forEach(stores, function (value, key) {
+                        value.is_store = true;    
+                    });
                     
-                    );
+                    var list = _.union( stores, events, promos, jobs );
                     console.log(list)
                     return list
                 },
