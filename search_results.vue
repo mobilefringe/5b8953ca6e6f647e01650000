@@ -15,7 +15,7 @@
                         <p class="search_result_title">Found {{searchResults.length}} results matching "{{searchQuery}}"</p>
             			<div v-for="(result,index) in searchResults" :key="index">
                             <div class="row result_container_row">
-                                <div v-if="result.store || result.store_front_alt_url" class="col-md-3 store_details_image center-block">
+                                <div v-if="result.store || result.store.store_front_alt_url" class="col-md-3 store_details_image center-block">
                                     <img v-if="result.store.store_front_url_abs" class="result_logo" :src="result.store.store_front_url_abs"/>
                                     <div v-else>
                                         <div class="no_logo">
