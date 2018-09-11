@@ -211,6 +211,20 @@ define([], function () {
             ]
         },
         {
+            path: '/thank_you',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('thank_you'),
+                    meta: {
+                        pageName: 'Thank You',
+                    },
+                    name: 'thankyou'
+                }
+            ]
+        },
+        {
             path: '/search-results',
             component: view('default'),
             children: [
