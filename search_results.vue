@@ -28,7 +28,10 @@
                                         </p>
                                     </div>    
                                 </div>
-                                <div class="col-md-3" v-else>
+                                <div v-else-if="result.eventable_type == 'Property'" class="col-md-3">
+                                    <img class="result_logo" src="//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1535746524000/centennial_default-compressor.png"/>
+                                </div>
+                                <div v-else class="col-md-3">
                                     <img v-if="result.store" class="result_logo" :src="result.store.store_front_url_abs"/>
                                     <img v-else-if="!result.store" class="result_logo" src="//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1535746524000/centennial_default-compressor.png"/>
                                     <!--<img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>-->
