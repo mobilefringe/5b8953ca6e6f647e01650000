@@ -16,7 +16,7 @@
             			<div v-for="(result,index) in searchResults" :key="index">
                             <div class="row result_container_row">
                                 <div v-if="result.store || result.image_url" class="col-md-3 store_details_image center-block">
-                                    <img v-if="result.store_front_url_abs" class="result_logo" :src="result.store.store_front_url_abs"/>
+                                    <img v-if="!_.includes(result.image_url,'missing')" class="result_logo" :src="result.store.store_front_url_abs"/>
                                     <div v-else>
                                         <div class="no_logo">
                                             <img src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1536092029690/transparent_logo.png">
