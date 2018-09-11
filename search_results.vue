@@ -1,0 +1,127 @@
+<template>
+	<div>
+		<loading-spinner v-if="!dataLoaded"></loading-spinner>
+        <transition name="fade">
+            <div v-if="dataLoaded" v-cloak>
+                <div v-if="pageBanner" class="inside_header_background" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+                    <div class="main_container">
+                        <div class="page_container">
+                            <h2>Seach Results</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_container margin_30">
+            		<div class="page_container text-left" v-if="searchResults && searchResults.length > 0" id="searchResults">
+                        <p class="search_result_title">Found {{searchResults.length}} results matching "{{searchQuery}}"</p>
+            			<div v-for="(result,index) in searchResults" :key="index" >
+                            <div class="row result_container_row">
+                                <div v-if="result.image_url && _.includes(result.image_url,'missing')" class=" col-md-2 store_details_image center-block">
+                                    <div class="no_logo">
+                                        <img src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1536092029690/transparent_logo.png">
+                                        <p class="store_details_name">
+                                            <span v-if="result.store_front_url_abs">{{result.name}}</span>
+                                            <span v-else>
+                                                <span v-if="result.store">{{ result.store.name }}</span>
+                                                <span v-else>{{ property.name }}</span>
+                                            </span>
+                                            
+                                        </p>
+                                    </div>    
+                                </div>
+                                <div class="col-md-2" v-else>
+                                    <img v-if="result.store" class="result_logo" :src="result.store.store_front_url_abs"/>
+                                    <img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>
+                                </div>
+                                <div class="col-md-10 search_result_content">
+                                    <h3>{{result.name}}</h3>
+                                    <p>{{truncated(result.description)}}</p>
+                                    <router-link v-if="result.store_front_url_abs" class="result_link hvr-icon-forward" :to="{name: 'storeDetails', params:{id:result.slug}}">Learn more about {{result.name}} <i class="fa fa-chevron-right hvr-icon"></i></router-link>
+                                    <router-link v-else-if="result.promo_image_url_abs" class="result_link hvr-icon-forward" :to="{ name: 'promotionDetails', params: { id: result.slug }}">Learn more about {{result.name}} <i class="fa fa-chevron-right hvr-icon"></i></router-link>
+                                    <router-link v-else-if="result.event_image_url_abs" class="result_link hvr-icon-forward" :to="{ name: 'eventDetails', params: { id: result.slug }}">Learn more about {{result.name}} <i class="fa fa-chevron-right hvr-icon"></i></router-link>
+                                    <router-link v-else-if="result.jobable_id" class="result_link hvr-icon-forward" :to="{ name: 'jobDetails', params: { id: result.slug }}">Learn more about {{result.name}} <i class="fa fa-chevron-right hvr-icon"></i></router-link>
+                                </div>
+                            </div>                
+                        </div>
+            		</div>
+                    <div class="page_container text-left" v-else> 
+                        <h3>Sorry, there are no search results. Please try a different query.</h3>
+                    </div>
+	            </div>
+            </div>
+        </transition>
+    </div>
+</template>
+
+<script>
+    define(["Vue", "vuex", "jquery", "json!site.json"], function(Vue, Vuex, $, site) {
+        return Vue.component("search-results", {
+            template: template, // the variable template will be injected
+            data() {
+                return {
+                    searchResults: null,
+                    searchQuery: null,
+                    dataLoaded: true,
+                }
+            },
+            beforeRouteUpdate(to, from, next) {
+                this.$nextTick(function() {
+                    this.updateResults();
+                });
+                next();
+            },
+            created() {
+                this.updateResults();
+                if (
+                    this.$route.params.results == null &&
+                    this.$route.params.results == undefined
+                ) {
+                    this.$router.push("/");
+                }
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'findRepoByName'
+                ]),
+                pageBanner() {
+                    var pageBanner = null;
+                    var temp_repo = this.findRepoByName("Pages Banner").images;
+                    if (temp_repo != null) {
+                        pageBanner = temp_repo[0];
+                    } else {
+                        pageBanner = {
+                            image_url: "//codecloud.cdn.speedyrails.net/sites/5b5f2c136e6f644fcb5b0100/image/jpeg/1529532304000/insidebanner2.jpg"
+                        };
+                    }
+                    return pageBanner;
+                }
+            },
+            methods: {
+                truncated(string) {
+                    return _.truncate(string, {
+                        length: 150,
+                        separator: " "
+                    });
+                },
+                updateResults() {
+                    if (
+                        this.$route.query.searchQuery !== null &&
+                        this.$route.query.searchQuery !== undefined &&
+                        this.$route.query.searchQuery.length > 0
+                    ) {
+                        if (
+                            this.$route.params.results !== null &&
+                            this.$route.params.results !== undefined &&
+                            Array.isArray(this.$route.params.results)
+                        ) {
+                            this.searchResults = this.$route.params.results;
+                            this.searchQuery = this.$route.query.searchQuery;
+                        }
+                    } else {
+                        this.$router.push("/");
+                    }
+                }
+            }
+        });
+    });
+</script>
