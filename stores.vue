@@ -166,8 +166,8 @@
                             } else {
                                 listTwo.push(value);    
                             }
-                        } catch(error){
-                            console.log(error)
+                        } catch (e) {
+                            console.log("Error loading data: " + e.message);
                         }
                     });
                     this.listOne = _.groupBy(listOne, store => (isNaN(_.upperCase(store.name.charAt(0))) ? _.upperCase(store.name.charAt(0)) : "#"));
