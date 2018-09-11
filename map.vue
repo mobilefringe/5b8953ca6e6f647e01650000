@@ -71,8 +71,7 @@
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
                         }
                     }
-                    
-                    // this.getSVGMap;
+
                     this.dataLoaded = true;
                 });
             },
@@ -88,13 +87,13 @@
                     _.forEach(all_stores, function(value, key) {
                         value.zoom = 2;
                     });
-                    var initZoom = {};
-                    initZoom.svgmap_region = "init";
-                    initZoom.z_coordinate = 1;
-                    initZoom.x = 0.5;
-                    initZoom.y = 0.5;
-                    initZoom.zoom = 1;
-                    all_stores.push(initZoom)
+                    // var initZoom = {};
+                    // initZoom.svgmap_region = "init";
+                    // initZoom.z_coordinate = 1;
+                    // initZoom.x = 0.5;
+                    // initZoom.y = 0.5;
+                    // initZoom.zoom = 1;
+                    // all_stores.push(initZoom)
                     return all_stores
                 },
                 getSVGMap () {
