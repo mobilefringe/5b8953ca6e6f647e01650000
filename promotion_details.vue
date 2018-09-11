@@ -97,7 +97,7 @@
                             }
                         } else {
                             if  (_.includes(this.currentPromo.promo_image_url_abs, 'missing')) {
-                                this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531496516000/promo placeholder.png";    
+                                this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/jpeg/1536679734000/PH3.jpg";    
                             }
                         }
                     }
