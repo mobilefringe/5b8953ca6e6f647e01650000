@@ -15,7 +15,7 @@
                         <p class="search_result_title">Found {{searchResults.length}} results matching "{{searchQuery}}"</p>
             			<div v-for="(result,index) in searchResults" :key="index">
                             <div class="row result_container_row">
-                                <div v-if="results.store" class="col-md-3 store_details_image center-block">
+                                <div v-if="result.store" class="col-md-3 store_details_image center-block">
                             
                                     <div v-if="_.includes(result.image_url,'missing')">
                                         <div class="no_logo">
