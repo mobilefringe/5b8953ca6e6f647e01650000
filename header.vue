@@ -161,15 +161,27 @@
                     'timezone',
                     'hours',
                     'getTodayHours',
+                    'processedStores',
+                    'processedEvents',
+                    'processedPromos',
+                    'processedJobs'
                 ]),
-                locale: {
-                    get () {
-                        return this.$store.state.locale
-                    },
-                    set (value) {
-                        this.$store.commit('SET_LOCALE', { lang: value })
-                    }
+                searchList() {
+                    return _.union(
+                        this.processedStores,
+                        this.processedEvents,
+                        this.processedPromos,
+                        this.processedJobs
+                    );
                 },
+                // locale: {
+                //     get () {
+                //         return this.$store.state.locale
+                //     },
+                //     set (value) {
+                //         this.$store.commit('SET_LOCALE', { lang: value })
+                //     }
+                // },
                 todays_hours() {
                     return this.getTodayHours;
                 },
