@@ -177,6 +177,7 @@
                         this.processedJobs
                     
                     );
+                    console.log(list)
                     return list
                 },
                 // locale: {
