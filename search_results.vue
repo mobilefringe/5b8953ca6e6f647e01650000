@@ -15,41 +15,23 @@
                         <p class="search_result_title">Found {{searchResults.length}} results matching "{{searchQuery}}"</p>
             			<div v-for="(result,index) in searchResults" :key="index">
                             <div class="row result_container_row">
-                                <div v-if="result.store || result.image_url" class="col-md-3 store_details_image center-block">
-                                    <img v-if="!_.includes(result.image_url,'missing')" class="result_logo" :src="result.store.store_front_url_abs"/>
-                                    <div v-else>
-                                        <div class="no_logo">
-                                            <img src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1536092029690/transparent_logo.png">
-                                            <p class="store_details_name">
-                                                <span v-if="result.store_front_url_abs">{{result.name}}</span>
-                                                <span v-else>
-                                                    <span v-if="result.store">{{ result.store.name }}</span>
-                                                    <span v-else>{{ property.name }}</span>
-                                                </span>
-                                            </p>
-                                        </div>    
-                                    </div>
-                                </div>
-                                <div v-else class="col-md-3 store_details_image center-block">
-                                    <img class="result_logo" src="//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1535746524000/centennial_default-compressor.png"/>    
-                                </div>
-                                <!--<div v-if="result.image_url && _.includes(result.image_url,'missing')" class="col-md-3 store_details_image center-block">-->
-                                <!--    <div class="no_logo">-->
-                                <!--        <img src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1536092029690/transparent_logo.png">-->
-                                <!--        <p class="store_details_name">-->
-                                <!--            <span v-if="result.store_front_url_abs">{{result.name}}</span>-->
-                                <!--            <span v-else>-->
-                                <!--                <span v-if="result.store">{{ result.store.name }}</span>-->
-                                <!--                <span v-else>{{ property.name }}</span>-->
-                                <!--            </span>-->
+                                <div v-if="result.image_url && _.includes(result.image_url,'missing')" class="col-md-3 store_details_image center-block">
+                                    <div class="no_logo">
+                                        <img src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1536092029690/transparent_logo.png">
+                                        <p class="store_details_name">
+                                            <span v-if="result.store_front_url_abs">{{result.name}}</span>
+                                            <span v-else>
+                                                <span v-if="result.store">{{ result.store.name }}</span>
+                                                <span v-else>{{ property.name }}</span>
+                                            </span>
                                             
-                                <!--        </p>-->
-                                <!--    </div>    -->
-                                <!--</div>-->
-                                <!--<div class="col-md-3" v-else>-->
-                                <!--    <img v-if="result.store" class="result_logo" :src="result.store.store_front_url_abs"/>-->
-                                <!--    <img v-else class="result_logo" src="//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1535746524000/centennial_default-compressor.png"/>-->
-                                <!--</div>-->
+                                        </p>
+                                    </div>    
+                                </div>
+                                <div class="col-md-3" v-else>
+                                    <img v-if="result.store" class="result_logo" :src="result.store.store_front_url_abs"/>
+                                    <img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>
+                                </div>
                                 <div class="col-md-9 search_result_content">
                                     <h3>{{result.name}}</h3>
                                     <p>{{truncated(result.description)}}</p>
