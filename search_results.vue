@@ -37,7 +37,7 @@
                                 <div class="col-md-9 search_result_content">
                                     <h3>{{result.name}}</h3>
                                     <p>{{truncated(result.description)}}</p>
-                                    <router-link v-if="result.store_front_url_abs" class="result_link hvr-icon-forward" :to="{name: 'storeDetails', params:{id:result.slug}}">
+                                    <router-link v-if="result.store_front_url_abs" class="result_link hvr-icon-forward" :to="{ name: 'storeDetails', params: { id:result.slu g}}">
                                         <i class="fa fa-caret-right hvr-icon"></i> View Store Details
                                     </router-link>
                                     <router-link v-else-if="result.promo_image_url_abs" class="result_link hvr-icon-forward" :to="{ name: 'promotionDetails', params: { id: result.slug }}">
