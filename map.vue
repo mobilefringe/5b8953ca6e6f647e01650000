@@ -72,7 +72,7 @@
                         }
                     }
                     
-                    this.getSVGMap;
+                    // this.getSVGMap;
                     this.dataLoaded = true;
                 });
             },
