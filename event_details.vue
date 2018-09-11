@@ -83,7 +83,7 @@
 				this.$store.dispatch("getData", "events").then(response => {
 					this.currentEvent = this.findEventBySlug(this.id);
 					if (this.currentEvent === null || this.currentEvent === undefined) {
-						this.$router.replace({ path: '/' });
+						this.$router.replace({ path: '/events' });
 					}
 					this.dataLoaded = true;
 				}, error => {
