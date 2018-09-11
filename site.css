@@ -248,7 +248,6 @@ hr{
         border: none;
     }
     .no_logo {
-        // height: auto;
         border: 1px solid #D8D8D8; 
         img {
             max-width: 100%;
