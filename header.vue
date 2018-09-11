@@ -170,11 +170,35 @@
                     'processedJobs'
                 ]),
                 searchList() {
+                    var events = this.processedEvents;
+                    _.forEach(events, function (value, key) {
+                        if (_.includes(value.eventable_type, 'Property')) {
+                            value.is_store = false;
+                        } else {
+                            value.is_store = true;    
+                        }
+                    });
+                    var promos = this.processedPromos;
+                    _.forEach(promos, function (value, key) {
+                        if (_.includes(value.promotionable_type, 'Property')) {
+                            value.is_store = false;
+                        } else {
+                            value.is_store = true;    
+                        }
+                    });
+                    var jobs = this.processedJobs;
+                    _.forEach(jobs, function (value, key) {
+                        if (_.includes(value.jobable_type, 'Property')) {
+                            value.is_store = false;
+                        } else {
+                            value.is_store = true;    
+                        }
+                    });
                     var list = _.union(
                         this.processedStores,
-                        this.processedEvents,
-                        this.processedPromos,
-                        this.processedJobs
+                        events,
+                        promos,
+                        jobs
                     
                     );
                     console.log(list)
