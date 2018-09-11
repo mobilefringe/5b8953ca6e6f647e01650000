@@ -170,12 +170,14 @@
                     'processedJobs'
                 ]),
                 searchList() {
-                    return _.union(
+                    var list = _.union(
                         this.processedStores,
                         this.processedEvents,
                         this.processedPromos,
                         this.processedJobs
+                    
                     );
+                    return list
                 },
                 // locale: {
                 //     get () {
