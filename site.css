@@ -252,9 +252,9 @@ hr{
         img {
             max-width: 100%;
         }
-        .store_details_name{
-            font-size:1rem;
-        }
+        // .store_details_name{
+        //     font-size:1rem;
+        // }
     }
     .result_logo {
         max-width: 100%;
