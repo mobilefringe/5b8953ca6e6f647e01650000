@@ -216,8 +216,9 @@
                     'findJobById',
                     'findRepoByName'
                 ]),
-                getSVGurl() {
-                    return "https://www.mallmaverick.com" + this.property.svg_map_url;
+                getSVGMap () {
+                    var mapURL = "https://www.mallmaverick.com" + this.property.svgmap_url.split("?")[0];
+                    return mapURL
                 },
                 svgMapRef() {
                     return this.$refs.svgmap_ref;
@@ -239,36 +240,36 @@
                     floor_list.push(floor_1);
                     return floor_list;
                 }
-                // floorList () {
-                //     var floor_list = [];
-                //     // Get SVG Maps from Repo
-                //     var floor_maps_repo = this.findRepoByName('SVG Maps');
+                floorList () {
+                    var floor_list = [];
+                    // Get SVG Maps from Repo
+                    var floor_maps_repo = this.findRepoByName('SVG Maps');
                     
-                //     if(floor_maps_repo !== null && floor_maps_repo !== undefined && floor_maps_repo.images.length > 0){
-                //         floor_maps = floor_maps_repo.images;
-                //         if (this.currentStore.z_coordinate == 1) {
-                //             var floor_1 = {};
-                //             floor_1.id = "first-floor";
-                //             floor_1.title = "Level 1";
-                //             floor_1.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(41084);}).image_url;
-                //             floor_1.z_index = 1;
-                //             floor_1.show = true;
+                    if(floor_maps_repo !== null && floor_maps_repo !== undefined && floor_maps_repo.images.length > 0){
+                        floor_maps = floor_maps_repo.images;
+                        if (this.currentStore.z_coordinate == 1) {
+                            var floor_1 = {};
+                            floor_1.id = "first-floor";
+                            floor_1.title = "Level 1";
+                            floor_1.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(41084);}).image_url;
+                            floor_1.z_index = 1;
+                            floor_1.show = true;
                             
-                //             floor_list.push(floor_1);
-                //         } else if (this.currentStore.z_coordinate == 2) {
-                //             var floor_2 = {};
-                //             floor_2.id = "second-floor";
-                //             floor_2.title = "Level 2";
-                //             floor_2.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(41085);}).image_url;
-                //             floor_2.z_index = 2;
-                //             floor_2.show = true;
+                            floor_list.push(floor_1);
+                        } else if (this.currentStore.z_coordinate == 2) {
+                            var floor_2 = {};
+                            floor_2.id = "second-floor";
+                            floor_2.title = "Level 2";
+                            floor_2.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(41085);}).image_url;
+                            floor_2.z_index = 2;
+                            floor_2.show = true;
                             
-                //             floor_list.push(floor_2);
-                //         }
-                //     }
+                            floor_list.push(floor_2);
+                        }
+                    }
                     
-                //     return floor_list;
-                // }
+                    return floor_list;
+                }
             },
             methods: {
                 loadData: async function() {
