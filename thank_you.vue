@@ -13,7 +13,7 @@
                         
                         <div class="col-sm-12">
                             <div class="page_body">
-                                Your subscription has been confirmed. You've been added to our list and will hear from us soon.
+                                Your subscription has been confirmed. You have been added to our list and will hear from us soon!
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                 updateCurrentPage(id) {
                     this.$nextTick(function() {
                         var _this = this;
-                        var temp_repo = _this.findRepoByName('Pages Banner');
+                        var temp_repo = _this.findRepoByName('Inside Page Banner');
                         if(temp_repo !== null && temp_repo !== undefined) {
                            temp_repo = temp_repo.images;
                            this.pageBanner = temp_repo[0];
