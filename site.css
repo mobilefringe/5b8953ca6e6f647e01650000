@@ -550,6 +550,7 @@ footer {
                 border-radius: 20px;
                 background-color: transparent;
                 font-size: 0;
+                color: #FFF;
             }
         }
         .slick-active button {
