@@ -175,11 +175,11 @@ hr{
             height: 21px;
             position: absolute;
             top: 50%;
-            left: 90px;
+            left: 110px;
             transform: translate(-50%, -50%);
         }
         .search-component {
-            width: 100px !important;
+            width: 120px !important;
             .options-list {
                 top: 40px;
                 li {
