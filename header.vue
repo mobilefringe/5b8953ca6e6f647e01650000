@@ -218,7 +218,6 @@
                     }
                 },
                 onOptionSelect(option) {
-                    console.log("option", option)
                     this.$router.push({
                         name: "search-results",
                         query: { searchQuery: this.search_result },
@@ -230,13 +229,7 @@
                 },
                 getWindowWidth(event) {
                     this.windowWidth = window.innerWidth;
-                },
-                // onOptionSelect(option) {
-                //     this.$nextTick(function() {
-                //         this.search = ""
-                //     });
-                //     this.$router.push("/stores/" + option.slug);
-                // }
+                }
             },
             beforeDestroy: function() {
                 window.removeEventListener('resize', this.getWindowWidth);
