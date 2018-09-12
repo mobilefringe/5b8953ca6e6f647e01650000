@@ -21,25 +21,52 @@
                             </p>
                             <a class="animated_btn" :href="siteInfo.googleMapsURL" target="_blank">Driving Direction</a>  
                         </div>
+                        <form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1AF70732BB50017304ADCD831C68992815B3B5A2C633024A979966BBEE8530AECCB46D1FDBC29F724865FD829D96324C2C">	
+<p>
+    <label for="fieldvvzr">First Name</label>
+    <br />
+    <input id="fieldvvzr" name="cm-f-vvzr" type="text" />
+</p>
+<p>
+    <label for="fieldvvzy">Last Name</label>
+    <br />
+    <input id="fieldvvzy" name="cm-f-vvzy" type="text" />
+</p>
+<p>
+    <label for="fieldvvzj">Postal Code</label>
+    <br />
+    <input id="fieldvvzj" name="cm-f-vvzj" type="text" />
+</p>
+<p>
+    <label for="fieldEmail">Email</label>
+    <br />
+    <input id="fieldEmail" name="cm-ehtkji-ehtkji" type="email" class="js-cm-email-input"
+    required />
+</p>
+<p>
+    <button class="js-cm-submit-button" type="submit">Subscribe</button>
+</p>
+</form>
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
                         <div class="details_col_9">
                             <p class="inside_page_link">Be the first to know about upcoming events and special announcements from {{ property.name }}!</p>
-                            <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/eddkll/" method="post" @submit.prevent="validateBeforeSubmit">
+                            <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/ehtkji/" method="post" @submit.prevent="validateBeforeSubmit">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="firstName">First Name</label>
-                                        <input id="firstName" class="margin_20 form-control" name="cm-f-voydr" type="text" required placeholder="First Name" />
+                                        <input id="firstName" class="margin_20 form-control" name="cm-f-vvzr" type="text" required placeholder="First Name" />
                                     </div>
                                     <div class="col-md-6">
                                         <label for="lastName">Last Name</label>
-                                        <input id="lastName" class="margin_20 form-control" name="cm-f-voydy" type="text" required placeholder="Last Name" />
+                                        <input id="lastName" class="margin_20 form-control" name="cm-f-vvzy" type="text" required placeholder="Last Name" />
                                     </div>
                                     <div class="col-md-6">
                                         <label for="postalCode">Postal Code</label>
-                                        <input id="postalCode" class="margin_20 form-control" name="cm-f-voydj" type="text" placeholder="Postal Code"/>
+                                        <input id="postalCode" class="margin_20 form-control" name="cm-f-vvzj" type="text" placeholder="Postal Code"/>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="fieldEmail">Email</label>
-                                        <input id="fieldEmail" required class="margin_20 form-control" name="cm-eddkll-eddkll" type="email" placeholder="Email">
+                                        <input id="fieldEmail" required class="margin_20 form-control" name="cm-ehtkji-ehtkji" type="email" placeholder="Email">
                                     </div>
                                     <div class="col-md-12">
                                         <div style="margin-left: 20px">
