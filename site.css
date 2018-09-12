@@ -206,23 +206,7 @@ hr{
             border-radius: 11px !important;
             width: 100%;
         }
-        // #siteSearchBtn {
-        //     cursor: pointer;
-        // }
     }
-    // #searchBox {
-    //     height: 25px !important;
-    //     margin: 0 -25px 0 0 !important;
-    //     padding: 0 10px !important;
-    //     font: 11px  Arial, sans-serif !important;
-    //     border: none !important;
-    //     background: #ffffff !important;
-    //     box-shadow: none;
-    //     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-    //     color: #555555;
-    //     border-radius: 11px !important;
-    //     width: 125px;
-    // }
 }
 #searchResults {
     margin: 30px auto;
@@ -252,9 +236,6 @@ hr{
         img {
             max-width: 100%;
         }
-        // .store_details_name{
-        //     font-size:1rem;
-        // }
     }
     .result_logo {
         max-width: 100%;
