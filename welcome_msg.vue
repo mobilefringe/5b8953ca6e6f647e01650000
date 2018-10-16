@@ -1,7 +1,7 @@
 <template>
     <div v-if="property" class="main_container">
         <div class="message_content">
-            <p class="center">{{ property.description }}</p> 
+            <p class="center bold">{{ property.description }}</p> 
         </div>
     </div>
 </template>
