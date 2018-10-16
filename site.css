@@ -94,6 +94,9 @@ hr{
 .center {
     text-align: center;
 }
+.bold {
+    font-weight: bold;
+}
 .margin_20 {
     margin-bottom: 20px;
 }
