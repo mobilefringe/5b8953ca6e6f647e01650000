@@ -81,7 +81,6 @@ define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "bootstrap-vue
             created() {
                 this.loadData().then(response => {
                     var temp_repo = this.findRepoByName('Jobs Banner');
-                    var temp_repo = this.findRepoByName('Leasing Banner');
                     if(temp_repo !== null && temp_repo !== undefined) {
                         var images = temp_repo.images;
                         if (images !== null && images !== undefined) {
