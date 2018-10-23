@@ -102,7 +102,7 @@
                     var _this = this;
                     if (leasing_docs != null) {
                         _.forEach(leasing_docs, function(value, key) {
-                            if (value.id == 41067) {
+                            if (value.id == 44911) {
                                 _this.leasingPlans = value.image_url;
                             }   
                             if (value.id == 41068) {
