@@ -98,18 +98,18 @@
                         }
                     }
                     
-                    // var leasing_docs = this.findRepoByName('Leasing Documents').images;
-                    // var _this = this;
-                    // if (leasing_docs != null) {
-                    //     _.forEach(leasing_docs, function(value, key) {
-                    //         if (value.id == 41067) {
-                    //             _this.leasingPlans = value.image_url;
-                    //         }   
-                    //         if (value.id == 41068) {
-                    //             _this.leasingDemos = value.image_url;
-                    //         }
-                    //     });
-                    // }
+                    var leasing_docs = this.findRepoByName('Leasing Documents').images;
+                    var _this = this;
+                    if (leasing_docs != null) {
+                        _.forEach(leasing_docs, function(value, key) {
+                            if (value.id == 41067) {
+                                _this.leasingPlans = value.image_url;
+                            }   
+                            if (value.id == 41068) {
+                                _this.leasingDemos = value.image_url;
+                            }
+                        });
+                    }
 
                     var repo_data = this.findRepoByName("Leasing Images");
                     if(repo_data != null && repo_data !== undefined && repo_data.images.length > 0){
