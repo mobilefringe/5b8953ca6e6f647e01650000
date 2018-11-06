@@ -59,10 +59,10 @@
                         this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + _this.id + ".json" }).then(function (response) {
                             var temp_repo = _this.findRepoByName('Inside Page Banner');
                             if(temp_repo && temp_repo.images) {
-                                this.pageBanner = temp_repo.images[0];
+                                _this.pageBanner = temp_repo.images[0];
                             }
                             else {
-                                this.pageBanner = {
+                                _this.pageBanner = {
                                     "image_url": "//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/png/1531495616000/inside_banner.png"
                                 }
                         }
