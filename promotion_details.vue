@@ -58,7 +58,9 @@
                     dataLoaded: false,
                     pageBanner: null,
                     currentPromo: null,
-                    siteInfo: site
+                    siteInfo: site,
+                    
+                    sideBanner: null
                 }
             },
             created() {
