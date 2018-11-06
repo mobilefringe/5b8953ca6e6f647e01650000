@@ -11,7 +11,7 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b8953ca6e6f647e01650000/image/jpeg/1540306167536/SideBanner1 (2).jpg" alt="" />    
+                           <img class="img_max" :src="sideBanner.image_url" alt="" />    
                         </div>
                         <div class="details_col_9">
                             <div class="row">
