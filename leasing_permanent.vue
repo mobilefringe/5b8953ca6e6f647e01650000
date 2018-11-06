@@ -103,7 +103,8 @@
                     permLeasing: null,
                     form_data: {},
                     formSuccessPerm: false,
-                    formErrorPerm: false
+                    formErrorPerm: false,
+                    sideBanner: null
                 }
             },
             created() {
