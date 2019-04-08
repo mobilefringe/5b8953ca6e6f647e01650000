@@ -108,7 +108,7 @@
 
 <script>
     define(["Vue", "vuex", "vue!today_hours.vue", "bootstrap-vue", "json!site.json", "vue!search-component"], function (Vue, Vuex, TodayHoursComponent, BootstrapVue, site, SearchComponent) {
-        // Vue.use(BootstrapVue);
+        Vue.use(BootstrapVue);
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
             data: function () {
