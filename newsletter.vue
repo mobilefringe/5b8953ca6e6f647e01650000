@@ -79,7 +79,7 @@
                 }
             },
             created() {
-                var temp_repo = this.findRepoByName('Newsletter Banner');
+                var temp_repo = this.findRepoByName('Jobs Banner');
                 if(temp_repo !== null && temp_repo !== undefined) {
                    var images = temp_repo.images;
                    if (images !== null && images !== undefined) {
