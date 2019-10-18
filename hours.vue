@@ -35,7 +35,7 @@
                                     <h3 class="hours_heading caps">We will be open the following Holidays</h3>
                                 </div>
                             </div>
-                            <div class="hours_container">
+                            <div class="hours_container" v-if="reducedHolidays">
                                 <div class="row hours_div"  v-for="hour in reducedHolidays">
                                     <div class="col-xs-12 col-sm-4 col-md-6">
                                         {{ hour.holiday_name }}, {{ hour.holiday_date | moment("MMM D", timezone) }}
