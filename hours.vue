@@ -50,7 +50,7 @@
                                     <h3 class="hours_heading caps">We will be closed the following Statutory Holidays</h3>
                                 </div>
                             </div>
-                            <div class="hours_container">
+                            <div class="hours_container" v-if="closeHolidays">
                                 <div class="row hours_div" v-for="hour in closeHolidays">
                                     <div class="col-sm-12 col-sm-4 col-md-6">
                                         {{ hour.holiday_name }}, {{ hour.holiday_date | moment("MMM D", timezone) }}   
