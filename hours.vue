@@ -29,8 +29,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div v-if="reducedHolidays" class="col-md-6">
-                            <div class="row">
+                        <div class="col-md-6">
+                            <div class="row" v-if="reducedHolidays">
                                 <div class="col-md-12">
                                     <h3 class="hours_heading caps">We will be open the following Holidays</h3>
                                 </div>
@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" v-if="closeHolidays">
                                 <div class="col-md-12">
                                     <h3 class="hours_heading caps">We will be closed the following Statutory Holidays</h3>
                                 </div>
