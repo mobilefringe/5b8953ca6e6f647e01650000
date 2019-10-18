@@ -367,7 +367,7 @@ strong {
 	font-family: Avenir-Book;
 	text-transform: uppercase;
 	&:hover, &:focus, &:active {
-	    color: $primary;
+	    color: #FFF;
 	    text-decoration: underline;
 	}
 }
