@@ -366,7 +366,7 @@ strong {
     min-width: 108px;
 	font-family: Avenir-Book;
 	text-transform: uppercase;
-	&:hover, &:focus, &:active {
+	a:hover, &:focus, &:active {
 	    color: #FFF;
 	    text-decoration: underline;
 	}
