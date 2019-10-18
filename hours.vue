@@ -118,6 +118,7 @@
                 reducedHolidays () {
                     var holidayHours = this.holidayHours;
                     return _.sortBy(_.filter(holidayHours, function(o) { return !o.is_closed; }), [function(o) { return o.holiday_date; }]);
+                    console.log(holidayHours)
                 },
                 closeHolidays () {
                     var holidayHours = this.holidayHours;
