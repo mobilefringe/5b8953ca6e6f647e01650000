@@ -65,20 +65,32 @@ define([], function () {
                 }
             ]
         },
+        // {
+        //     path: '/hours',
+        //     component: view('default'),
+        //     children: [
+        //         {
+        //             path: '',
+        //             component: view('hours'),
+        //             meta: {
+        //                 pageName: 'Hours',
+        //             },
+        //             name: 'hours'
+        //         }
+        //     ]
+        // },
         {
-            path: '/hours',
-            component: view('default'),
-            children: [
-                {
-                    path: '',
-                    component: view('hours'),
-                    meta: {
-                        pageName: 'Hours',
-                    },
-                    name: 'hours'
-                }
-            ]
+           path: '/hours',
+           component: view('default'),
+           children: [
+              {
+                 path: '',
+                 component: view('hours'),
+                 name: 'hourList',
+              }
+           ]
         },
+        
         {
             path: '/leasing',
             component: view('default'),
