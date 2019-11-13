@@ -145,7 +145,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                     await this.$store.dispatch('initializeApi', { site: "centennialmall", version: "v4" });
                     await this.$store.dispatch("getData","property");
                     let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores"), this.$store.dispatch("getData", "repos")]);
-                    await Promise.all([this.$store.dispatch("LOAD_META_DATA")]);
+                    await Promise.all([this.$store.dispatch("LOAD_META_DATA_NEW")]);
                 } catch (e) {
                     console.log("Error loading data: " + e.message);    
                 }
